@@ -1,7 +1,7 @@
 # SmartMirror_IgnitionMaker
 Smart Mirror using Inductive Automation's Ignition - Maker Edition
 
-The smart mirror is running on a Raspberry Pi 4. I tried running it on a Raspberry Pi Zero, but there just isn't enough processing power to run it smoothly.
+The smart mirror is running on a Raspberry Pi 4. I can run the calendar, weather, and current date/time on a Raspberry Pi Zero. The carousel requires too much processing power to run on a Pi Zero.
 This is a living project and as such the screenshots may show different configurations and items.
 
 ## Screenshots
