@@ -10,3 +10,7 @@ This is a living project and as such the screenshots may show different configur
 ![Smart Mirror](/images/Screenshot_20201004_203613.png)
 
 ![Smart Mirror](/images/Screenshot_20201008_215252.png)
+
+## SmartMirror AddOns
+### Weather Forecast
+The Weather Forecase AddOn uses the One Call API from [OpenWeatherMap](https://openweathermap.org). Data needed for this AddOn can be brought into Ignition either through Node-RED using the node-red-node-openweathermap and mqtt nodes or by installing the tags and scripts located in the weather directory.
