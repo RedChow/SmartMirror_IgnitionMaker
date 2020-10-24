@@ -4,9 +4,13 @@
   * SmartMirror_NHL_ViewsAndScripts.zip
   * TimeTags.json
   * nhl_UDT.json
+
 2. Unzip the nhl_icons.zip folder. Using "Image Management" under Tools, upload all the icons to a folder named "nhl" in the root folder. I.e., the path to all the icons is /nhl/...
+
 3. Go to Config -> MQTT Engine -> Namespaces -> Custom and add subscription with value "nhl/#", root tag folder = "nhl", and payload JSON set to True.
+
 4. Check that you can run "nhlapi.getDataMethods.setUpNHLGames()" in the Script Console by checking Config -> Gateway Settings -> Gateway Scripting Project. If an error occurs when running the aforementioned script, either adjust the name in Gateway Scripting Project accordingly or change the Tag Change Event Scripts
+
 5. Add the two Global Tag Change Event Scripts:
   
 # Import Info  
