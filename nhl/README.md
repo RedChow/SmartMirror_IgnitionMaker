@@ -1,9 +1,9 @@
 
 # Installation
 1. Import the following:
-  * SmartMirror_NHL_ViewsAndScripts.zip
-  * TimeTags.json
-  * nhl_UDT.json
+* SmartMirror_NHL_ViewsAndScripts.zip
+* TimeTags.json
+* nhl_UDT.json
 
 2. Unzip the nhl_icons.zip folder. Using "Image Management" under Tools, upload all the icons to a folder named "nhl" in the root folder. I.e., the path to all the icons is /nhl/...
 
