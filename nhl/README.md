@@ -23,4 +23,4 @@ The TimeTags.json contains two Expression Tags that evaulate to True at 3:00 AM 
 days_before = 1
 days_after = 0
 ```
-The days_before variable is how many days before the current day to retrieve games while days_after is how far in the future to go.
+The days_before variable is how many days before the current day to retrieve games while days_after is how far in the future to go. For example, if you wanted to see scores from two days ago plus get the schedule for up to, and including, five days aways, change days_before to 2 and days_after to 5.
