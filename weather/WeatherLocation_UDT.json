@@ -1,0 +1,32 @@
+{
+  "name": "WeatherLocation",
+  "parameters": {
+    "apikey": {
+      "dataType": "String"
+    },
+    "latitude": {
+      "dataType": "Float"
+    },
+    "mqttsubtopicname": {
+      "dataType": "String"
+    },
+    "longitude": {
+      "dataType": "Float"
+    }
+  },
+  "tagType": "UdtType",
+  "tags": [
+    {
+      "valueSource": "expr",
+      "eventScripts": [
+        {
+          "eventid": "valueChanged",
+          "script": "\tif not initialChange:\n\t\t#nhlapi.getDataMethods.getLineScore(tagPath\n\t\tweather.openweather.getWeather(\"[.]\")"
+        }
+      ],
+      "expression": "floor(getMinute({[System]Gateway/CurrentDateTime})/15)",
+      "name": "get_weather",
+      "tagType": "AtomicTag"
+    }
+  ]
+}
