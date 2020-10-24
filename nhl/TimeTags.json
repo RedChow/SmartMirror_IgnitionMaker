@@ -1,0 +1,20 @@
+{
+  "name": "TimeTags",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "valueSource": "expr",
+      "expression": "getHour24({[System]Gateway/CurrentDateTime}) \u003d3 \u0026\u0026 getMinute({[System]Gateway/CurrentDateTime}) \u003d 0 ",
+      "dataType": "Boolean",
+      "name": "3AM",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "expr",
+      "expression": "getHour24({[System]Gateway/CurrentDateTime}) \u003d3 \u0026\u0026 getMinute({[System]Gateway/CurrentDateTime}) \u003d 5",
+      "dataType": "Boolean",
+      "name": "305AM",
+      "tagType": "AtomicTag"
+    }
+  ]
+}

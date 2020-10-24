@@ -1,0 +1,78 @@
+{
+  "name": "nhl",
+  "parameters": {
+    "gameId": {
+      "dataType": "String",
+      "value": ""
+    },
+    "startTimeUTC": {
+      "dataType": "String",
+      "value": ""
+    },
+    "lineScoreLink": {
+      "dataType": "String",
+      "value": ""
+    }
+  },
+  "tagType": "UdtType",
+  "tags": [
+    {
+      "valueSource": "expr",
+      "eventScripts": [
+        {
+          "eventid": "valueChanged",
+          "script": "\tif not initialChange:\n\t\tnhlapi.getDataMethods.getLineScore(tagPath)"
+        }
+      ],
+      "expression": "if( {[.]canFireEvents} \u0026\u0026 floor(getSecond({[System]Gateway/CurrentDateTime})/30) \u003d 0, True, False)",
+      "dataType": "Boolean",
+      "name": "fireEvent",
+      "tagType": "AtomicTag"
+    },
+    {
+      "value": {
+        "bindType": "parameter",
+        "binding": "{lineScoreLink}"
+      },
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "lineScoreLink",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "Boolean",
+      "name": "isGameOver",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "expr",
+      "expression": "{[.]startTimeTimestamp} \u003c\u003d addMinutes({[System]Gateway/CurrentDateTime}, 10)/1000 \u0026\u0026 !{[.]isGameOver}",
+      "dataType": "Boolean",
+      "name": "canFireEvents",
+      "tagType": "AtomicTag"
+    },
+    {
+      "value": {
+        "bindType": "parameter",
+        "binding": "{startTimeUTC}"
+      },
+      "valueSource": "memory",
+      "dataType": "Int8",
+      "name": "startTimeTimestamp",
+      "formatString": "#,##0.##",
+      "tagType": "AtomicTag"
+    },
+    {
+      "value": {
+        "bindType": "parameter",
+        "binding": "{gameId}"
+      },
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "gameId",
+      "tagType": "AtomicTag"
+    }
+  ]
+}
