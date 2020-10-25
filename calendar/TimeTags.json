@@ -1,0 +1,7 @@
+{
+  "valueSource": "expr",
+  "expression": "getHour24({[System]Gateway/CurrentDateTime}) \u003d3 \u0026\u0026 getMinute({[System]Gateway/CurrentDateTime}) \u003d 0 ",
+  "dataType": "Boolean",
+  "name": "3AM",
+  "tagType": "AtomicTag"
+}
