@@ -18,7 +18,7 @@ The Weather Forecase AddOn uses the One Call API from [OpenWeatherMap](https://o
 ![Weather](/images/WeatherAddOn_Screenshot.png)
 
 ### NHL
-The NHL portiion is a little more complicated, and requires imorting tags, scripts, and Perspective Views.
+The NHL portion is a little more complicated, and requires imorting tags, scripts, and Perspective Views.
 
 ![NHL](/images/NHLAddOn_Screenshot.png)
 
