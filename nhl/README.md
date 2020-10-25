@@ -13,7 +13,8 @@
  * ![Smart Mirror](/nhl/images/NHLAddOn_EventSetup_TagChangeMaintenance.png)
   ![Smart Mirror](/nhl/images/NHLAddOn_EventSetup_TagChangeMaintenance_Script.png)
  
- 
+# Screenshot
+![NHL](/images/NHLAddOn_Screenshot.png)
   
 # Additional Info  
 The SmartMirror_NHL_ViewsAndScripts contains Perspective Views, namely /SmartMirror/NHLGames/NHLCard and SmartMirror_NHL. The SmartMirror_NHL View contains a carousel item that will iterate through all the games found in the [MQTT Engine]nhl/nhl/games folder.
