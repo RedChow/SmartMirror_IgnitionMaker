@@ -20,5 +20,13 @@ The view entitled "SmartMirror_Calendar_Events" will scroll through all events. 
 
 ![Smart Mirror](/calendar/images/CalendarAddOn_EventsCarousel.png)
 
+# Installation
+1. Import the zip file
+2. Import the TimeTags.json
+3. Set up a global tag change script:
+* ![Smart Mirror](/calendar/images/CalendarAddOn_Maintenance.png)
+![Smart Mirror](/calendar/images/CalendarAddOn_Maintenance_Script.png)
+4. Go to Config -> MQTT Engine -> Settings -> Namespaces -> Custom and add an appropriate subsription, root tag folder, and JSON payload settings. I used calendar/#, calendar, and True (respectively) for mine.
+
 # Example Calendar Script
 
