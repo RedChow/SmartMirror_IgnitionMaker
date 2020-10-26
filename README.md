@@ -22,3 +22,5 @@ The NHL portion is a little more complicated, and requires imorting tags, script
 
 ![NHL](/images/NHLAddOn_Screenshot.png)
 
+### Calendar
+The Calendar has two main parts, a rotated carousel that iterates through all events 90 days into the future and a calendar that shows days of the week along with the scheduled events for that day. The calendar portions expect tags to named for the day of occurrence, with the value being all the text for that day. The Calendar page has more details.
